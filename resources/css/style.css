@@ -1,0 +1,59 @@
+/* Universal Sytles */
+html {
+  font-family: "Raleway", Ariel, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+  border: 1px solid red;
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 4rem;
+}
+
+header .content {
+ display: flex;
+ padding: 1rem 1.5rem;
+ align-items: center;
+ justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-left: 1rem;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+
+header .logo_text {
+display: flex;
+font-family: "Work Sans", Ariel, sans-serif;
+text-transform: uppercase;
+}
+
+header .logo_text .first {
+  font-weight: 700;
+}
+
+header .logo_text .last {
+  font-weight: 200;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
