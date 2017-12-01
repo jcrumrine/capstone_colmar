@@ -4,10 +4,6 @@ html {
   font-size: 16px;
 }
 
-a {
-  text-decoration: none;
-}
-
 div {
   border: 1px solid red;
 }
@@ -23,14 +19,6 @@ header .content {
  padding: 1rem 1.5rem;
  align-items: center;
  justify-content: space-between;
-}
-
-header nav ul {
-  display: flex;
-}
-
-nav li {
-  padding-left: 1rem;
 }
 
 header .logo {
@@ -57,3 +45,39 @@ header nav {
   display: flex;
   justify-content: space-between;
 }
+
+header nav ul {
+  display: flex;
+}
+
+header nav li {
+  padding-left: 1rem;
+}
+
+/* Hide Mobile Header when Desktop Size */
+header .mobile {
+  display: none;
+}
+
+/* Dipslay Mobile friendly header on small devices */
+@media only screen and (max-width: 760px) {
+
+  /* Hide the desktop header */
+  header .desktop {
+    display: none;
+  }
+
+  /* Modile friendly stylization */
+  header .mobile {
+    display: block;
+    width: 100%;
+    height: 4rem;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+  }
