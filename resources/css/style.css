@@ -1,11 +1,27 @@
+.test {
+  position: fixed;
+  left: 50%;
+  height: 100%;
+}
+
+div {
+  border: 1px solid red;
+}
+
 /* Universal Sytles */
 html {
   font-family: "Raleway", Ariel, sans-serif;
   font-size: 16px;
 }
 
-div {
-  border: 1px solid red;
+.image_container {
+  overflow: hidden;
+}
+
+.image_container img {
+  display: block;
+  height: auto;
+  max-width: 100%
 }
 
 /* Header */
@@ -14,11 +30,14 @@ header {
   height: 4rem;
 }
 
+header .desktop {
+  padding: 1rem 1.5rem;
+}
 header .content {
- display: flex;
- padding: 1rem 1.5rem;
- align-items: center;
- justify-content: space-between;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
 }
 
 header .logo {
@@ -28,9 +47,9 @@ header .logo {
 }
 
 header .logo_text {
-display: flex;
-font-family: "Work Sans", Ariel, sans-serif;
-text-transform: uppercase;
+  display: flex;
+  font-family: "Work Sans", Ariel, sans-serif;
+  text-transform: uppercase;
 }
 
 header .logo_text .first {
@@ -60,7 +79,7 @@ header .mobile {
 }
 
 /* Dipslay Mobile friendly header on small devices */
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 625px) {
 
   /* Hide the desktop header */
   header .desktop {
@@ -68,10 +87,12 @@ header .mobile {
   }
 
   /* Modile friendly stylization */
+
   header .mobile {
     display: block;
     width: 100%;
     height: 4rem;
+    padding: 0;
   }
 
   header .mobile ul {
@@ -79,5 +100,96 @@ header .mobile {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    height: 2rem;
     padding: 1rem 0;
   }
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  background-color: #d8d8d8;
+  padding: 2rem 1.5rem;
+}
+
+.banner .image_container {
+  display: inline-block;
+  width: 60%;
+}
+
+.banner .content {
+  margin: auto 1.5rem;
+  display: inline-block;
+  width: 40%;
+}
+
+.banner h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.banner h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.button {
+  background-color: #4A4A4A;
+  color: white;
+  border-radius: 5px;
+  padding: .5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  border: 1px solid #393939;
+
+}
+
+@media only screen and (max-width: 780px) {
+  .banner {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .banner .image_container {
+    display: block;
+    width: 100%
+  }
+
+  .banner .content {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 2rem 1rem;
+  }
+
+  .banner h1 {
+    padding: 0 0 2rem 0;
+  }
+
+  .banner h3 {
+    padding: 0 0 1.5rem 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The End */
