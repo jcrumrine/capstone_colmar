@@ -1,3 +1,4 @@
+/*
 .test {
   position: fixed;
   left: 50%;
@@ -7,6 +8,7 @@
 div {
   border: 1px solid red;
 }
+*/
 
 /* Universal Sytles */
 html {
@@ -44,6 +46,53 @@ h6 {
   font-weight: 200;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-left: 1rem;
+}
+
+header, footer {
+  max-width: 100%;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Generic Classes used for stylization*/
+.button {
+  background-color: #4A4A4A;
+  color: white;
+  border-radius: 5px;
+  padding: .5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  border: 1px solid #393939;
+}
+
+.center {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.highlight {
+  background-color: #d8d8d8;
+}
+
+.read_more {
+  font-weight: 700;
+  color: #83AAE6
+}
+
+/* Image stylization */
 .image_container {
   overflow: hidden;
 }
@@ -54,14 +103,21 @@ h6 {
   max-width: 100%;
 }
 
-.read_more {
-  font-weight: 700;
-  color: #83AAE6
-}
-
+/* Main content layout - 40%/60% Layout */
 .content_container {
   display: flex;
   padding: 2rem 1.5rem;
+}
+
+.left_content {
+display: block;
+width: 60%;
+padding-right: 1.5rem;
+}
+
+.right_content {
+display: block;
+width: 40%;
 }
 
 .content_container h1 {
@@ -76,27 +132,12 @@ h6 {
   padding-top: 1.75rem;
 }
 
-.content_container h4 {
-  padding-top: 1.25
-}
-.content_container h5 {
-  padding-top: .75rem;
-}
 .content_container h6 {
   padding-top: 1.5rem;
 }
 
-.left_content {
-display: block;
-width: 60%;
 
-}
-
-.right_content {
-display: block;
-width: 40%;
-}
-
+/* Article Layout */
 .article {
   display: flex;
 }
@@ -114,23 +155,24 @@ width: 40%;
   margin: auto 0;
 }
 
-.highlight {
-  background-color: #d8d8d8;
+/* Grid Layout */
+.grid_container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 2rem;
+  padding: 2rem 4.5rem;
 }
 
-.center {
-  text-align: center;
+.grid_item {
+  display: inline-block;
+  background-color: white;
+}
+
+.grid_item_text {
+padding: 1rem 1rem 1.5rem 1rem;
 }
 
 /* Header */
-header {
-  max-width: 100%;
-  padding: 1rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 header .logo {
   display: flex;
   align-items: center;
@@ -141,19 +183,6 @@ header .logo_text {
   display: flex;
   font-family: "Work Sans", Ariel, sans-serif;
   text-transform: uppercase;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-header nav ul {
-  display: flex;
-}
-
-header nav li {
-  padding-left: 1rem;
 }
 
 /* Hide Mobile Header when Desktop Size */
@@ -184,32 +213,31 @@ header .mobile {
   }
 }
 
-/* Banner */
+/* Banner specific stylization*/
 .banner .right_content {
   margin: auto 0;
   padding-left: 1.5rem;
 }
 
-.button {
-  background-color: #4A4A4A;
-  color: white;
-  border-radius: 5px;
-  padding: .5rem;
-  text-align: center;
-  font-size: 1.25rem;
-  border: 1px solid #393939;
+.banner h3 {
+  padding-bottom: 1rem;
 }
 
 @media only screen and (max-width: 780px) {
 
 }
 
-/* Information */
+/* Information and Course information specific stylization */
+.information h5,  {
+  padding-top: 1rem;
+}
 
+.article_text h5, .grid_item h5 {
+  padding-top: 0.5rem;
+}
 
-
-
-
-
-
-/* The End */
+/* Footer */
+footer {
+  border: 1px solid #d8d8d8;
+  font-weight: 200;
+}
