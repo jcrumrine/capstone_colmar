@@ -1,12 +1,12 @@
 /*
 .test {
-  position: fixed;
-  left: 50%;
-  height: 100%;
+position: fixed;
+left: 50%;
+height: 100%;
 }
 
 div {
-  border: 1px solid red;
+border: 1px solid red;
 }
 */
 
@@ -110,14 +110,14 @@ header, footer {
 }
 
 .left_content {
-display: block;
-width: 60%;
-padding-right: 1.5rem;
+  display: block;
+  width: 60%;
+  padding-right: 1.5rem;
 }
 
 .right_content {
-display: block;
-width: 40%;
+  display: block;
+  width: 40%;
 }
 
 .content_container h1 {
@@ -169,7 +169,7 @@ width: 40%;
 }
 
 .grid_item_text {
-padding: 1rem 1rem 1.5rem 1rem;
+  padding: 1rem 1rem 1.5rem 1rem;
 }
 
 /* Header */
@@ -186,31 +186,8 @@ header .logo_text {
 }
 
 /* Hide Mobile Header when Desktop Size */
-header .mobile {
+.mobile {
   display: none;
-}
-
-/* Dipslay Mobile friendly header on small devices */
-@media only screen and (max-width: 625px) {
-
-  /* Hide the desktop header */
-  header .desktop {
-    display: none;
-  }
-
-  /* Modile friendly stylization */
-  header .mobile {
-    display: block;
-    width: 100%;
-    padding: 0;
-  }
-
-  header .mobile ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
 }
 
 /* Banner specific stylization*/
@@ -221,10 +198,6 @@ header .mobile {
 
 .banner h3 {
   padding-bottom: 1rem;
-}
-
-@media only screen and (max-width: 780px) {
-
 }
 
 /* Information and Course information specific stylization */
@@ -240,4 +213,108 @@ header .mobile {
 footer {
   border: 1px solid #d8d8d8;
   font-weight: 200;
+}
+
+/* Display Mobile friendly header on small devices */
+@media only screen and (max-width: 625px) {
+
+  /* Header */
+  /* Hide destop elements */
+  .desktop {
+    display: none;
+  }
+
+  /* Modile friendly stylization */
+  .mobile {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Banner */
+  .content_container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .left_content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .right_content {
+    max-width: fit-content;
+    width: 100%;
+    margin: 0;
+  }
+
+  .banner .right_content {
+    padding: 2rem 1rem;
+  }
+
+  .banner h3 {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .article {
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 4rem;
+  }
+
+  .article_img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .article_text {
+    padding: 2rem 1rem 0 1rem;
+    max-width: fit-content;
+    width: 100%;
+  }
+
+  .information .right_content {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  .information .highlight {
+    background-color: inherit;
+  }
+  .article:last-child {
+    padding-bottom: 0;
+  }
+
+  .course_info {
+    padding: 0 1rem 2rem 1rem;
+    width: auto;
+  }
+
+  .course_info h3:first-child {
+    margin-top:1rem;
+  }
+
+  .course_info h3 {
+    margin-top: 0.5rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+
+  .thesis {
+    padding: 1rem 0 1.5rem;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  footer span {
+    font-size: .75rem;
+  }
+
 }
