@@ -1,19 +1,8 @@
-/*
-.test {
-position: fixed;
-left: 50%;
-height: 100%;
-}
-
-div {
-border: 1px solid red;
-}
-*/
-
 /* Universal Sytles */
 html {
   font-family: "Raleway", Ariel, sans-serif;
   font-size: 16px;
+  color: #000000;
 }
 
 h1 {
@@ -69,13 +58,13 @@ header, footer {
 
 /* Generic Classes used for stylization*/
 .button {
-  background-color: #4A4A4A;
-  color: white;
+  background-color: #608A82;
+  color: #FFFFFF;
   border-radius: 5px;
   padding: .5rem;
   text-align: center;
   font-size: 1.25rem;
-  border: 1px solid #393939;
+  border: 1px solid #69978E;
 }
 
 .center {
@@ -84,12 +73,12 @@ header, footer {
 }
 
 .highlight {
-  background-color: #d8d8d8;
+  background-color: #AAD6CE;
 }
 
 .read_more {
   font-weight: 700;
-  color: #83AAE6
+  color: #FF5656;
 }
 
 /* Image stylization */
@@ -165,7 +154,7 @@ header, footer {
 
 .grid_item {
   display: inline-block;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .grid_item_text {
@@ -173,6 +162,11 @@ header, footer {
 }
 
 /* Header */
+header .desktop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%
+}
 header .logo {
   display: flex;
   align-items: center;
@@ -183,11 +177,6 @@ header .logo_text {
   display: flex;
   font-family: "Work Sans", Ariel, sans-serif;
   text-transform: uppercase;
-}
-
-/* Hide Mobile Header when Desktop Size */
-.mobile {
-  display: none;
 }
 
 /* Banner specific stylization*/
@@ -215,46 +204,53 @@ footer {
   font-weight: 200;
 }
 
-/* Display Mobile friendly header on small devices */
+/* Hide Mobile when Desktop Size */
+.mobile {
+  display: none;
+}
+
+/* Mobile Site Stylization */
 @media only screen and (max-width: 625px) {
 
-  /* Header */
   /* Hide destop elements */
-  .desktop {
+  header .desktop, .desktop {
     display: none;
   }
 
   /* Modile friendly stylization */
-  .mobile {
+  header .mobile, .mobile {
     display: block;
     width: 100%;
     padding: 0;
   }
 
+  /* Header */
   header .mobile ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 100%
   }
 
-  /* Banner */
+  /* Reset the width and padding for mobile */
+  .content_container, .left_content, .right_content, .article, .article_img,
+  .article_text {
+    width: 100%;
+    max-width: fit-content;
+    padding: 0;
+  }
+
+  /* Background color reset */
+  .information .highlight {
+    background-color: inherit;
+  }
+
+  /* Contnet Container */
   .content_container {
     flex-direction: column;
-    padding: 0;
   }
 
-  .left_content {
-    width: 100%;
-    padding: 0;
-  }
-
-  .right_content {
-    max-width: fit-content;
-    width: 100%;
-    margin: 0;
-  }
-
+  /* Specific padding for different page items */
   .banner .right_content {
     padding: 2rem 1rem;
   }
@@ -265,28 +261,17 @@ footer {
 
   .article {
     flex-direction: column;
-    width: 100%;
     padding-bottom: 4rem;
-  }
-
-  .article_img {
-    width: 100%;
-    padding: 0;
   }
 
   .article_text {
     padding: 2rem 1rem 0 1rem;
-    max-width: fit-content;
-    width: 100%;
   }
 
   .information .right_content {
     padding: 1rem 1rem 2rem 1rem;
   }
 
-  .information .highlight {
-    background-color: inherit;
-  }
   .article:last-child {
     padding-bottom: 0;
   }
@@ -316,5 +301,4 @@ footer {
   footer span {
     font-size: .75rem;
   }
-
 }
