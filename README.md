@@ -1,6 +1,8 @@
 # capstone_colmar
 Codecademy Project - Capstone Project
 
+Project Objectives as outlined in the Codecademy Course:
+
 CAPSTONE PROJECT - COLMAR ACADEMY
 
 Colmar Academy
